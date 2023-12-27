@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+.check {
+    border: 2px solid red;
+}
+
+.Navbar-li {
+    padding-top: 5px;
+    color: #0C356A;
+    border-bottom: 3px;
+    border-style: solid;
+    border-bottom-color: transparent;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s;
+
+}
+
+.Navbar-li:hover {
+    cursor: pointer;
+    border-bottom-color: black;
+}
+
+.Navbar-logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
