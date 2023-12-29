@@ -13,7 +13,7 @@ const Search = () => {
       <p className="text-white/[.95] text-2xl font-thin text-center mb-10  border-solid border-white w-fit mx-auto px-20">
         Save Time, Energy And Money - Find And Book Your New Room 100% Online
       </p>
-      <div className="bg-white w-1/3 mx-auto h-20 rounded-full px-10 flex items-center flex-row">
+      <div className="bg-white w-fit mx-auto h-20 rounded-full pl-10 pr-6  flex items-center flex-row">
         <div className="flex  justify-between  w-full">
           <input
             type="text"

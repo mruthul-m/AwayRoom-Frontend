@@ -1,11 +1,15 @@
-import { ReactNode } from "react";
 import "./header.css";
-interface HeaderProps {
-  children: ReactNode;
-}
+import Navbar from "../navbar/Navbar";
+import Search from "../search/Search";
 
-const Header = ({ children }: HeaderProps) => {
-  return <div className="Header-bg">{children}</div>;
+const Header = () => {
+  return (
+    <div className="Header-bg">
+      {" "}
+      <Navbar />
+      <Search />
+    </div>
+  );
 };
 
 export default Header;

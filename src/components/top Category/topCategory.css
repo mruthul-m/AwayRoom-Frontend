@@ -1,0 +1,23 @@
+.TopCategory-Img {
+    background: url('../../assets/topRooms/girlsroom.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% 5%;
+
+}
+
+.TopCategory-Img2 {
+    background: url('../../assets/topRooms/apartment.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% 5%;
+
+}
+
+.TopCategory-Img3 {
+    background: url('../../assets/topRooms/mansroom.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% 55%;
+
+}
