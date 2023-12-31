@@ -27,7 +27,7 @@ const Search = () => {
           </button>
           <button
             onClick={search}
-            className="flex gap-3  py-2 items-center border-2 border-orange-400 px-6 rounded-3xl text-orange-400"
+            className="flex gap-3  py-2 items-center border-2 border-orange-400 px-6 rounded-3xl text-orange-400 hover:bg-orange-400 hover:text-white duration-500"
           >
             <span className="font-semibold">Search</span>{" "}
             <CiSearch className="text-2xl" />

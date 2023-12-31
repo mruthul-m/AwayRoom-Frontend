@@ -17,11 +17,11 @@ const CityRooms = () => {
         <h1 className="text-4xl font-semibold font-sans">
           Find Room In Your Cities
         </h1>
-        <button className="bg-green-800 text-white font-semibold rounded-2xl px-5">
+        <button className="bg-green-800 text-white font-semibold rounded-2xl px-5 border-2 border-transparent hover:bg-white hover:text-green-800 duration-500 hover:border-green-800">
           Find Now
         </button>
       </div>
-      <div className="grid grid-cols-4 grid-rows-2  w-full gap-x-3 gap-y-8">
+      <div className="grid grid-cols-4 grid-rows-2  w-full gap-x-3">
         <div className="w-full h-72 ">
           <img
             src={image1}

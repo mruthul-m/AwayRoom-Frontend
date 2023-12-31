@@ -1,12 +1,22 @@
+import { Link } from "react-router-dom";
 import "./navbar.css";
-const Navbar = () => {
+
+interface NavProps {
+  content: boolean;
+}
+const Navbar = ({ content }: NavProps) => {
   return (
     <nav className="max-w-screen-xl mx-auto bg-slate-50 px-4 py-4  flex justify-between rounded-md box-border">
       <div className="flex flex-row justify-between gap-9 p-2 ">
-        <h2 className="Navbar-logo">logo</h2>
+        <Link to={"/"}>
+          <h2 className="Navbar-logo">logo</h2>
+        </Link>
+
         <div>
           <ul className="flex flex-row gap-4">
-            <li className="Navbar-li">Home</li>
+            <Link to={"/"}>
+              <li className="Navbar-li">Home</li>
+            </Link>
             <li className="Navbar-li">About</li>
             <li className="Navbar-li">Contact us</li>
             <li className="Navbar-li">Policy</li>
@@ -14,11 +24,15 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+
       <div className="flex justify-between gap-3">
-        <button className="rounded-3xl bg-green-900 px-6 text-white font-semibold cursor-pointer">
-          + Add Listing
-        </button>
-        <button className="rounded-3xl bg-orange-400 text-white px-5 cursor-pointer font-semibold">
+        {content !== true && (
+          <button className="rounded-3xl bg-green-900 px-6 text-white font-semibold cursor-pointer border-2 border-transparent hover:text-green-900 hover:border-green-900 hover:bg-white duration-500">
+            + Add Listing
+          </button>
+        )}
+
+        <button className="rounded-3xl bg-orange-400 text-white px-5 cursor-pointer font-semibold border-2 border-transparent hover:bg-white hover:text-orange-400 hover:border-orange-400 duration-500">
           Log In
         </button>
       </div>
