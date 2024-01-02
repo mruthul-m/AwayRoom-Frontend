@@ -27,9 +27,11 @@ const Navbar = ({ content }: NavProps) => {
 
       <div className="flex justify-between gap-3">
         {content !== true && (
-          <button className="rounded-3xl bg-green-900 px-6 text-white font-semibold cursor-pointer border-2 border-transparent hover:text-green-900 hover:border-green-900 hover:bg-white duration-500">
-            + Add Listing
-          </button>
+          <Link to={"/addlisting"}>
+            <button className="rounded-3xl bg-green-900 px-6 text-white font-semibold cursor-pointer border-2 border-transparent hover:text-green-900 hover:border-green-900 hover:bg-white duration-500 h-full">
+              + Add Listing
+            </button>
+          </Link>
         )}
 
         <button className="rounded-3xl bg-orange-400 text-white px-5 cursor-pointer font-semibold border-2 border-transparent hover:bg-white hover:text-orange-400 hover:border-orange-400 duration-500">

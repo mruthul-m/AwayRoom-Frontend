@@ -7,7 +7,7 @@ const Sidebar = () => {
         <input
           type="text"
           placeholder="Boys Room"
-          className="rounded-sm py-1 block w-full outline-none text-black text-xl "
+          className="rounded-sm py-1 block w-full outline-none text-black text-xl px-2"
           readOnly
         />
       </section>
@@ -16,25 +16,12 @@ const Sidebar = () => {
         <input
           type="text"
           placeholder="city, area name"
-          className="rounded-sm py-1 block w-full outline-none text-black text-xl"
-        />
-      </section>{" "}
-      <section>
-        <label className="font-thin text-lg">Category:</label>
-        <input
-          type="text"
-          placeholder="Boys Room"
-          className="rounded-sm py-1 block w-full outline-none text-black text-xl"
-        />
-      </section>{" "}
-      <section>
-        <label className="font-thin text-lg">Category:</label>
-        <input
-          type="text"
-          placeholder="Boys Room"
-          className="rounded-sm py-1 block w-full outline-none text-black text-xl"
+          className="rounded-sm py-1 block w-full outline-none text-black text-xl px-2"
         />
       </section>
+      <button className="w-1/4 p-2 bg-slate-50 rounded-2xl text-blue-500 font-semibold">
+        filter
+      </button>
     </div>
   );
 };
