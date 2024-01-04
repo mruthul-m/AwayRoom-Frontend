@@ -25,15 +25,15 @@ const Login = () => {
         <div className="overlay-container">
           <div className="overlay">
             <div className="overlay-panel overlay-left">
-              <h1 className="text-2xl font-bold  tracking-wider m-2">
+              <h1 className="text-4xl font-bold  tracking-wider m-2">
                 Welcome Back!
               </h1>
-              <p className="text-xs font-light m-2">
+              <p className="text-sm font-light m-2">
                 To keep connected with us please login with your personal info
               </p>
               <button
                 className=" border-white py-2 px-6 mt-3 rounded-3xl font-semibold "
-                style={{ fontSize: ".6rem", borderWidth: "1px" }}
+                style={{ fontSize: ".8rem", borderWidth: "1px" }}
                 id="signIn"
                 onClick={() => handleOnClick("signIn")}
               >
@@ -41,17 +41,17 @@ const Login = () => {
               </button>
             </div>
             <div className="overlay-panel overlay-right">
-              <h1 className="text-2xl font-bold tracking-wider">
+              <h1 className="text-4xl font-bold tracking-wider">
                 Hello, Friend!
               </h1>
-              <p className="text-xs font-light m-2">
+              <p className="text-sm font-light m-2">
                 Enter your personal details and start journey with us
               </p>
               <button
                 id="signUp"
                 onClick={() => handleOnClick("signUp")}
                 className=" border-white py-2 px-6 mt-3 rounded-3xl font-semibold"
-                style={{ fontSize: ".6rem", borderWidth: "1px" }}
+                style={{ fontSize: ".8rem", borderWidth: "1px" }}
               >
                 SIGN UP
               </button>

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="Header-bg">
       {" "}
-      <Navbar />
+      <Navbar content={false} />
       <Search />
     </div>
   );

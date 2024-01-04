@@ -34,21 +34,21 @@ const SignInForm = () => {
         <h1 className="font-semibold text-2xl">Sign in</h1>
         <div className="flex gap-2 m-4">
           <section className="  p-2 rounded-full cursor-pointer">
-            <FaGooglePlusG className="text-black/[.7]" />
+            <FaGooglePlusG className="text-black/[.7] text-xl" />
           </section>
           <section className=" p-2 rounded-full cursor-pointer">
-            <BiLogoFacebook className="text-black/[.7]" />
+            <BiLogoFacebook className="text-black/[.7] text-xl" />
           </section>
           <section className="p-2 cursor-pointer">
-            <BiLogoLinkedin className="text-black/[.7]" />
+            <BiLogoLinkedin className="text-black/[.7] text-xl" />
           </section>
         </div>
-        <span className="py-1" style={{ fontSize: ".6rem" }}>
+        <span className="py-1" style={{ fontSize: ".8rem" }}>
           or use your account
         </span>
-        <div className="flex flex-col gap-3 mb-2">
+        <div className="flex flex-col gap-4 mb-2">
           <input
-            className="bg-gray-100 placeholder:text-xs  px-2 py-1"
+            className="bg-gray-100 placeholder:text-sm  px-2 py-1"
             type="email"
             placeholder="Email"
             name="email"
@@ -56,7 +56,7 @@ const SignInForm = () => {
             onChange={handleChange}
           />
           <input
-            className="bg-gray-100 placeholder:text-xs px-2 py-1"
+            className="bg-gray-100 placeholder:text-sm px-2 py-1"
             type="password"
             name="password"
             placeholder="Password"
@@ -67,7 +67,7 @@ const SignInForm = () => {
         <p className="text-xs">Forgot your password?</p>
         <button
           className=" bg-orange-600 py-2 px-8 mt-3 rounded-3xl font-semibold text-white"
-          style={{ fontSize: ".6rem", borderWidth: "1px" }}
+          style={{ fontSize: ".8rem", borderWidth: "1px" }}
           id="signIn"
         >
           SIGN IN

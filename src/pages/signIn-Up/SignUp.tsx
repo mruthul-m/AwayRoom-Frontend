@@ -34,22 +34,22 @@ const SignUpForm = () => {
   return (
     <div className="form-container sign-up-container">
       <form onSubmit={handleOnSubmit}>
-        <h1 className="font-semibold text-2xl">Create Account</h1>
+        <h1 className="font-semibold text-4xl">Create Account</h1>
         <div className="flex gap-2 m-4">
-          <section className="  p-2 rounded-full cursor-pointer">
-            <FaGooglePlusG className="text-black/[.7]" />
+          <section className="  p-2 rounded-full cursor-pointer ">
+            <FaGooglePlusG className="text-black/[.7] text-xl" />
           </section>
           <section className=" p-2 rounded-full cursor-pointer">
-            <BiLogoFacebook className="text-black/[.7]" />
+            <BiLogoFacebook className="text-black/[.7] text-xl" />
           </section>
           <section className="p-2 cursor-pointer">
-            <BiLogoLinkedin className="text-black/[.7]" />
+            <BiLogoLinkedin className="text-black/[.7] text-xl" />
           </section>
         </div>
-        <span className="py-1" style={{ fontSize: ".6rem" }}>
+        <span className="py-1 mb-2" style={{ fontSize: ".8rem" }}>
           or use your email for registration
         </span>
-        <div className="flex flex-col gap-3 mb-2">
+        <div className="flex flex-col gap-4 mb-2">
           {" "}
           <input
             type="text"
@@ -57,7 +57,7 @@ const SignUpForm = () => {
             value={state.name}
             onChange={handleChange}
             placeholder="Name"
-            className="bg-gray-100 placeholder:text-xs text-sm font-normal  px-2 py-1"
+            className="bg-gray-100 placeholder:text-xs text-lg font-normal  px-2 py-1"
           />
           <input
             type="email"
@@ -65,7 +65,7 @@ const SignUpForm = () => {
             value={state.email}
             onChange={handleChange}
             placeholder="Email"
-            className="bg-gray-100 placeholder:text-xs text-sm px-2 py-1 "
+            className="bg-gray-100 placeholder:text-xs text-lg px-2 py-1 "
           />
           <input
             type="password"
@@ -73,13 +73,13 @@ const SignUpForm = () => {
             value={state.password}
             onChange={handleChange}
             placeholder="Password"
-            className="bg-gray-100 placeholder:text-xs  px-2 py-1"
+            className="bg-gray-100 placeholder:text-xs text-lg  px-2 py-1"
           />
         </div>
 
         <button
           className=" bg-orange-600 py-2 px-8 mt-3 rounded-3xl font-semibold text-white"
-          style={{ fontSize: ".6rem", borderWidth: "1px" }}
+          style={{ fontSize: ".8rem", borderWidth: "1px" }}
           id="signIn"
         >
           SIGN UP

@@ -33,10 +33,11 @@ const Navbar = ({ content }: NavProps) => {
             </button>
           </Link>
         )}
-
-        <button className="rounded-3xl bg-orange-400 text-white px-5 cursor-pointer font-semibold border-2 border-transparent hover:bg-white hover:text-orange-400 hover:border-orange-400 duration-500">
-          Log In
-        </button>
+        <Link to="/login">
+          <button className="rounded-3xl bg-orange-400 text-white px-5 cursor-pointer font-semibold border-2 border-transparent hover:bg-white hover:text-orange-400 hover:border-orange-400 duration-500 h-full">
+            Log In
+          </button>
+        </Link>
       </div>
     </nav>
   );
