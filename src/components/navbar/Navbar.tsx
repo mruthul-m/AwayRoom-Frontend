@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink as JumpLink } from "react-router-hash-link";
 import "./navbar.css";
 
 interface NavProps {
@@ -17,8 +18,19 @@ const Navbar = ({ content }: NavProps) => {
             <Link to={"/"}>
               <li className="Navbar-li">Home</li>
             </Link>
-            <li className="Navbar-li">About</li>
-            <li className="Navbar-li">Contact us</li>
+            <JumpLink to={"#about"}>
+              <li className="Navbar-li about relative">
+                About
+                <div className="dropdown-about">
+                  this is only opens if it hower over it
+                </div>
+              </li>
+            </JumpLink>
+
+            <JumpLink to="#contacts">
+              <li className="Navbar-li">Contact us</li>
+            </JumpLink>
+
             <li className="Navbar-li">Policy</li>
             <li className="Navbar-li">Pages</li>
           </ul>

@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 
+
+/* .about:hover .dropdown-about {
+    display: block;
+} */
+
+.dropdown-about {
+    position: absolute;
+    max-width: 168px;
+    display: none;
+    background: #fff;
+    padding: 10px;
+    color: black;
+    bottom: -100px;
+    width: 150px;
+    box-sizing: border-box;
+
+}
+
 .check {
     border: 2px solid red;
 }

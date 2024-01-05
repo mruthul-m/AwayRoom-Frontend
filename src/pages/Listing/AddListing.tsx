@@ -2,10 +2,69 @@ import image2 from "../../assets/addlistingcover.jpg";
 import Navbar from "../../components/navbar/Navbar";
 import { HiOutlineThumbUp } from "react-icons/hi";
 import "./addlist.css";
+import FormInput from "../../components/FormInput/FormInput";
+import { useState } from "react";
 function AddListing() {
-  const handleClick = () => {
-    alert("Thank you, Your details has been sent for verification");
-  };
+  const [values, setValues] = useState({
+    name: "",
+    phone: "",
+    address1: "",
+    city: "",
+    address2: "",
+    images: [],
+    zipcode: "",
+  });
+
+  const inputs = [
+    {
+      id: 1,
+      name: "username",
+      type: "text",
+      placeholder: "Name",
+      errorMessage: "",
+      label: "Name :",
+    },
+    {
+      id: 2,
+      name: "phone",
+      type: "number",
+      placeholder: "ph number",
+      errorMessage: "",
+      label: "Contact No :",
+    },
+    {
+      id: 3,
+      name: "address1",
+      type: "text",
+      placeholder: "address 1",
+      errorMessage: "",
+      label: "address 1:",
+    },
+    {
+      id: 4,
+      name: "city",
+      type: "text",
+      placeholder: "city",
+      errorMessage: "",
+      label: "City :",
+    },
+    {
+      id: 5,
+      name: "address2",
+      type: "text",
+      placeholder: "address 2",
+      errorMessage: "",
+      label: "Address2 :",
+    },
+    {
+      id: 6,
+      name: "zipcode",
+      type: "number",
+      placeholder: "zip code",
+      errorMessage: "",
+      label: "Zip code :",
+    },
+  ];
   return (
     <div className="">
       <div
@@ -27,83 +86,14 @@ function AddListing() {
               Here you can give your details and best pictures of your asset to
               show case. Only best pictures are considering for showcasing.
             </span>
-            <div className="w-full mt-10 font-mono flex gap-10 ">
-              <section className="w-full flex flex-col">
-                <label htmlFor="" className="font-thin text-base block">
-                  Name :
-                </label>
-                <input
-                  type="text"
-                  className=" h-8 border-2 w-3/5 mb-4 border-black rounded-md outline-none font-normal text-lg p-4"
-                  required
-                />
-                <label htmlFor="" className="font-thin text-base block">
-                  Address 1 :
-                </label>
-                <input
-                  type="text"
-                  className=" h-8 border-2 w-3/5 mb-4 border-black rounded-md outline-none font-normal text-lg p-4"
-                  required
-                />
-                <label htmlFor="" className="font-thin text-base block">
-                  Address 2 :
-                </label>
-                <input
-                  type="text"
-                  className=" h-8 border-2 w-3/5 mb-4 border-black rounded-md outline-none font-normal text-lg p-4"
-                />
-                <label htmlFor="" className="font-thin text-base block">
-                  Images (JPG?/PNG) :
-                </label>
-                <input
-                  type="file"
-                  id="files"
-                  className=" h-fit border-2 w-3/5 mb-4 border-black rounded-md outline-none font-normal text-lg p-4"
-                  multiple
-                  required
-                />
-              </section>
-              <section className="w-full">
-                <label htmlFor="" className="font-thin text-base block">
-                  Phone :
-                </label>
-                <input
-                  type="number"
-                  className=" h-8 border-2 w-3/5 mb-4 border-black rounded-md outline-none font-normal text-lg p-4"
-                  required
-                />
-                <label htmlFor="" className="font-thin text-base block">
-                  City :
-                </label>
-                <input
-                  type="text"
-                  className=" h-8 border-2 w-3/5 mb-4 border-black rounded-md outline-none font-normal text-lg p-4"
-                />
-                <label htmlFor="" className="font-thin text-base block">
-                  zip code :
-                </label>
-                <input
-                  type="text"
-                  className=" h-8 border-2 w-3/5 mb-4 border-black rounded-md outline-none font-normal text-lg p-4"
-                  required
-                />
-                <label htmlFor="" className="font-thin text-base block">
-                  Monthly Rent :
-                </label>
-                <input
-                  type="number"
-                  className=" h-8 border-2 w-3/5 mb-4 border-black rounded-md outline-none font-normal text-lg p-4"
-                  required
-                />
-              </section>
-            </div>
           </p>
-          <button
-            onClick={handleClick}
-            className="bg-black text-white py-3 px-7 font-semibold rounded-2xl"
-          >
-            send
-          </button>
+          <form action="" className="bg-transparent">
+            <div className="grid grid-cols-2 gap-3 w-full border-2 border-black">
+              {inputs.map((input) => (
+                <FormInput key={input.id} />
+              ))}
+            </div>
+          </form>
         </div>
       </div>
     </div>

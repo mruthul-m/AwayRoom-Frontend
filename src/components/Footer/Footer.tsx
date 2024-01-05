@@ -8,7 +8,7 @@ import CopyRight from "../copyright/copyright";
 function Footer() {
   return (
     <>
-      <div className="py-10 max-w-screen-xl  mx-auto">
+      <div className="py-10 max-w-screen-xl  mx-auto" id="about">
         <div className="flex  justify-between">
           <div className="flex-1 ">
             <p className="font-semibold mb-6">About us</p>
@@ -17,7 +17,7 @@ function Footer() {
               laborum eum voluptas minus sequi tenetur? Neque fugit labore
               consequuntur possimus.
             </div>
-            <ul className="font-thin">
+            <ul className="font-thin" id="contacts">
               <li className="flex gap-2 py-2 items-center">
                 <TbPhoneCall />{" "}
                 <span className="cursor-pointer">+91 9099872342</span>
