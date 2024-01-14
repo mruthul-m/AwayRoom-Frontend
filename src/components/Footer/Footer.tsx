@@ -4,7 +4,7 @@ import { FaRegAddressBook, FaFacebook, FaLinkedin } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import CopyRight from "../copyright/copyright";
-
+import { footerElement, propertyType } from "../../utils/FooterDetails";
 function Footer() {
   return (
     <>
@@ -33,57 +33,37 @@ function Footer() {
             </ul>
           </div>
           <div className=" flex justify-between pl-5" style={{ flex: "1.8" }}>
-            <ul className="flex flex-col gap-2 font-thin ">
-              <p className=" font-semibold">Places</p>
-              <li className="hover:underline cursor-pointer duration-300">
-                Kannur
-              </li>
-              <li className="hover:underline cursor-pointer duration-300">
-                Kozhikode
-              </li>
-              <li className="hover:underline cursor-pointer duration-300">
-                Kollam
-              </li>
-              <li className="hover:underline cursor-pointer duration-300">
-                Ernakulam
-              </li>
-              <li className="hover:underline cursor-pointer duration-300">
-                Trivandrum
-              </li>
-            </ul>
-            <ul className="flex flex-col gap-2 font-thin ">
-              <p className=" font-semibold">Other options</p>
-              <li className="hover:underline cursor-pointer duration-300">
-                Accomodations
-              </li>
-              <li className="hover:underline cursor-pointer duration-300">
-                Place Blog
-              </li>
-              <li className="hover:underline cursor-pointer duration-300">
-                Reviews
-              </li>
-              <li className="hover:underline cursor-pointer duration-300">
-                Maps
-              </li>
-              <li className="hover:underline cursor-pointer duration-300">
-                Add list
-              </li>
-            </ul>
+            {footerElement.map((item) => {
+              return (
+                <ul className="flex flex-col gap-2 font-thin " key={item.id}>
+                  <p className=" font-semibold">{item.head}</p>
+                  {item.value.map((item, index) => {
+                    return (
+                      <li
+                        className="hover:underline cursor-pointer duration-300"
+                        key={index}
+                      >
+                        {item}
+                      </li>
+                    );
+                  })}
+                </ul>
+              );
+            })}
+
             <div className="flex flex-col gap-4">
               <ul className="flex flex-col gap-2 font-thin ">
                 <p className=" font-semibold">Property type</p>
-                <li className="hover:underline cursor-pointer duration-300">
-                  Boys Rooms
-                </li>
-                <li className="hover:underline cursor-pointer duration-300">
-                  PG for Girls
-                </li>
-                <li className="hover:underline cursor-pointer duration-300">
-                  Apartments
-                </li>
-                <li className="hover:underline cursor-pointer duration-300">
-                  Special Rooms
-                </li>
+                {propertyType.map((item, index) => {
+                  return (
+                    <li
+                      className="hover:underline cursor-pointer duration-300"
+                      key={index}
+                    >
+                      {item}
+                    </li>
+                  );
+                })}
               </ul>
               <div>
                 <p className="font-semibold mb-2">Social links</p>
